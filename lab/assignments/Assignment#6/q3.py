@@ -1,5 +1,4 @@
-import time
-
+import random
 def inplaceinsertionsort(l):
     
     for i in range(1,len(l)):
@@ -12,13 +11,9 @@ def inplaceinsertionsort(l):
     return
 
 l=[45,32, 98,32,43,104,1003,1,2,3,4,56,33,23,323,5,3,2,5,7,8,5,3,2,5,67,7,5,3,2,4,6,7,7,5,3,2,2,345,5,234,97]
-start = time.time()
 inplaceinsertionsort(l)
-end=time.time()
-print(l)
-print(end-start)
-# for j in range(4, -1, -1):
-#     print(j)
+print("in place insert sort",l)
+
 def simplesort(l):
     smallest = l[0]
     j=0
@@ -35,8 +30,7 @@ def simplesort(l):
 
 li=[45,32, 98,32,43,104,1003,1,2,3,4,56,33,23,323,5,3,2,5,7,8,5,3,2,5,67,7,5,3,2,4,6,7,7,5,3,2,2,345,5,234,97]
 simplesort(li)
-print(li)
-
+print("simplesort",li)
 
 def mergesort(arr):
     if len(arr)<=1:
@@ -67,6 +61,6 @@ def merge(sortedleft, sortedright):
     result.extend(sortedright[j:])
     return result
 
-unsortedarr = [9,8,7,6,5,4,3,2]
+unsortedarr = random.sample(range(1, 31), 10)
 sortedarr = mergesort(unsortedarr)
-print(sortedarr)
+print("mergesort",sortedarr)

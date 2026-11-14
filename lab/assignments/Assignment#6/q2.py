@@ -1,5 +1,5 @@
 # Quicksort Algorithm
-import time, random
+import random
 def partion(l, start, end):
     p=l[start]
     i=start+1
@@ -39,13 +39,9 @@ def quicksort(l, start, end):
         quicksort(l, x+1, end)
 
 
-n = 10000
-l=   random.sample(range(1, 10001), n)
+n = 10
+l= random.sample(range(1, 10001), n)
 length = len(l)
-start = time.time()
 quicksort(l, 0, length-1)
-end = time.time()
 for x in l:
     print(x, end=" ")
-
-print(end-start)

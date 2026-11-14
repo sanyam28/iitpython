@@ -10,10 +10,9 @@ def no_to_binary(n):
 
     return int(binaryno)
 
-# print('Number to Binary Conversion')
-# notobinary = abs(int(input("Enter non negative integer: \n")))
-# print(no_to_binary(notobinary))
-# print(no_to_binary(13))
+print('Number to Binary Conversion')
+notobinary = abs(int(input("Enter non negative integer: \n")))
+print(no_to_binary(notobinary))
 
 def binary_to_no(binaryno):
     binaryno =str(binaryno)
@@ -27,10 +26,9 @@ def binary_to_no(binaryno):
         j+=1
     return number
 
-# print(binary_to_no(1101))
-# print('Binary to Number Conversion')
-# binarytono = abs(int(input("Enter binary number: \n")))
-# print(binary_to_no(binarytono))
+print('Binary to Number Conversion')
+binarytono = abs(int(input("Enter binary number: \n")))
+print(binary_to_no(binarytono))
 
 def power_rec(x,n):
     if n==1:
@@ -39,10 +37,14 @@ def power_rec(x,n):
         return x*x
     else:
         return x*power_rec(x, n-1)
-print(power_rec(4,3))
+print("4 cube",power_rec(4,3))
 
 
-def power(x,n):
+def power_eff(x,n):
+    if n==0:
+        return 1
+    if n==1:
+        return x
     bidi = str(no_to_binary(n))
     lengthv = len(bidi)
     power_seq = []
@@ -70,7 +72,4 @@ while True:
         print("Base should be other than zero")
 
 powerr= abs(int(input("Choose non negative integer power: disclaimer: negative values will be considered as positive: ")))
-
-    
-
-print(power(base,powerr))
+print(power_eff(base,powerr))

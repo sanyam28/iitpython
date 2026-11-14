@@ -17,6 +17,7 @@ def sort_the_list(give_array_i):
                 is_swapped=True
                 give_array = swap(give_array, i, i+1)
         if is_swapped == False :
+            print("iterations",(s+1)*(i+1))
             return give_array
         is_swapped = False
     return give_array

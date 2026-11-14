@@ -19,6 +19,7 @@ def sort_the_list(give_array_i):
         if is_swapped == False :
             return give_array
         is_swapped = False
+    print(s)
     return give_array
 
 # user_input = input("Enter array elements separated by spaces: ") 

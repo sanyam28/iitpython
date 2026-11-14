@@ -2,13 +2,13 @@ import math
 
 class Vectors:
     def returnstr(self, vecto):
-        if(self.x and self.y and self.z ==0):
+        if(self.x ==0 and self.y==0 and self.z ==0):
             return "0i + 0j + 0k"
         else:
             return f"{str(vecto.x)+'i' if vecto.x!=0 else ''} {'' if vecto.x==0 and vecto.y>=0 else ('' if vecto.y==0 else('+' if vecto.y>0 else '-'))} {str(abs(vecto.y))+'j' if vecto.y!=0 else ''} {'' if vecto.y==0 and vecto.z>=0 else ('' if vecto.z==0 else('+' if vecto.z>0 else '-'))} {str(abs(vecto.z))+'k' if vecto.z!=0 else ''}"
 
     def isValid(self, gval):
-        if((str(type(gval.x)) == "<class 'int'>" or str(type(gval.x)) == "<class 'float'>") and (str(type(gval.y)) == "<class 'int'>" or str(type(gval.y)) == "<class 'float'>") and (str(type(gval.z)) == "<class 'int'>" or str(type(gval.x)) == "<class 'float'>")):
+        if((str(type(gval.x)) == "<class 'int'>" or str(type(gval.x)) == "<class 'float'>") and (str(type(gval.y)) == "<class 'int'>" or str(type(gval.y)) == "<class 'float'>") and (str(type(gval.z)) == "<class 'int'>" or str(type(gval.z)) == "<class 'float'>")):
             return True
         else:
             return False
@@ -69,7 +69,9 @@ class Vectors:
 
 a= Vectors(1,2,-2)
 b= Vectors(2,-1,0)
+c= Vectors(10,9,0)
 print(a)
+print(c)
 print('mag',Vectors.mag(b))
 print('sum', a+b)
 print('sub' ,a-b)
